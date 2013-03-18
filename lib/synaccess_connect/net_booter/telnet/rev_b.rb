@@ -1,25 +1,19 @@
-class TelnetConnectRevA < TelnetConnect
-
-  def override_options
-    {
-      :prompt => /^\r>$/n,
-      :status_string => 'On'
-    }
-  end
-
+class RevB < NetBooter::Telnet
   def statuses
     with_connection do
+      @connection.cmd("")
+      sleep 0.1
       parse_status @connection.cmd("pshow")
     end
   end
 
 private
+
   def authenticate
-    sleep 0.1
+    @connection.cmd('login')
+    sleep 0.25
     @connection.puts(@options[:username])
-    sleep 0.1
+    sleep 0.25
     @connection.puts(@options[:password])
-    @connection.cmd('')
-    sleep 0.1
   end
 end
