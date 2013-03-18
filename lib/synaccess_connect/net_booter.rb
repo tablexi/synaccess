@@ -32,16 +32,30 @@ class NetBooter
     toggle(channel, false)
   end
 
-private
+  def login(username, password)
+    _receive_message
+    _receive_message
+    # sleep 1
+    puts "logging in"
+    @socket.send("#{username}\r", 0)
+    # sleep 1
+    @socket.send("#{password}\r", 0)
+
+    sleep 0.1
+    puts "done logging in"
+  end
 
   def connect
-    puts 'connecting'
-    @socket = ::TCPSocket.new @host, @port
+    puts "connecting to #{@host}:#{@port}"
+    @socket = TCPSocket.new @host, @port
+    puts "socket: #{@socket}"
+    #TODO handle no socket
 
     # optional - capture incoming message. The message contains some garbled characters
     # characters used for Telnet Mode setting. Ignor it.
-    connect_message = @socket.recvfrom(1024)
-    @socket.send("\r", 0)
+    # connect_message = @socket.recvfrom(1024)
+    # puts connect_message
+    login('admin', 'admin')
   end
 
   def disconnect
@@ -50,13 +64,22 @@ private
     @socket.close
   end
 
+private
+
+  def authenticate
+    puts "authenticating"
+  end
+
   def _receive_message(options = {})
     # First two lines of response are usually meaningless
     options = {skip: 2}.merge(options)
     i = 0
     message = []
     while line = @socket.gets
-      break if line == "\r\r\n"
+      puts "l: #{line.gsub(/\r/, '\r').gsub(/\n/, '\n')}"
+      # Revision B firmware uses \r\r\n
+      # Old firmware has \r>\n at the end
+      break if line == "\r\r\n" || line == "\r>\n"
       message << line.strip if i >= options[:skip]
       i += 1
     end
