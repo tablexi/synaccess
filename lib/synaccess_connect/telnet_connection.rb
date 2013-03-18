@@ -1,6 +1,6 @@
 require 'net/telnet'
 
-class NetBooter::Telnet
+class NetBooter::TelnetConnection
   def initialize(host, options = {})
     @host = host
     @options = { :port => 23,

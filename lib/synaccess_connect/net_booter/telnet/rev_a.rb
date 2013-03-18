@@ -1,4 +1,4 @@
-class RevA < NetBooter::Telnet
+class RevA < NetBooter::TelnetConnection
 
   def override_options
     {

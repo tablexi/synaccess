@@ -1,4 +1,4 @@
-class RevB < NetBooter::Telnet
+class RevB < NetBooter::TelnetConnection
   def statuses
     with_connection do
       @connection.cmd("")

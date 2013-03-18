@@ -1,4 +1,12 @@
-require 'synaccess_connect/net_booter'
+module NetBooter
+end
+
+require 'synaccess_connect/net_booter/telnet/telnet_connection'
+require 'synaccess_connect/net_booter/telnet/rev_a'
+require 'synaccess_connect/net_booter/telnet/rev_b'
+
+
+
 # if defined?(Rails)
 #   module SynaccessConnect
 #     class Railtie < Rails::Railtie
