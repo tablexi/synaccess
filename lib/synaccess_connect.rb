@@ -1,11 +1,17 @@
 module NetBooter
   module Telnet
   end
+  module Http
+  end
 end
 
 require 'synaccess_connect/net_booter/telnet/telnet_connection'
 require 'synaccess_connect/net_booter/telnet/rev_a'
 require 'synaccess_connect/net_booter/telnet/rev_b'
+
+require 'synaccess_connect/net_booter/http/http_connection'
+require 'synaccess_connect/net_booter/http/rev_a'
+require 'synaccess_connect/net_booter/http/rev_b'
 
 
 
