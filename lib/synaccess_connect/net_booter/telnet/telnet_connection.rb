@@ -16,7 +16,15 @@ class NetBooter::TelnetConnection
   end
 
   def status(outlet = 1)
-    statuses[outlet]
+    statuses.fetch outlet do
+      raise Exception.new('Error communicating with relay')
+    end
+  end
+
+  def statuses
+    with_connection :default => {} do
+      local_statuses
+    end
   end
 
   def toggle_on(outlet = 1)
@@ -32,6 +40,7 @@ class NetBooter::TelnetConnection
     with_connection do
       @connection.cmd("pset #{outlet} #{status_string}")
     end
+    status
   end
 
 private
@@ -44,6 +53,8 @@ private
   # returns hash of { channel => boolean_status }
   def parse_status(response)
     statuses = {}
+    return statuses unless response
+
     response.split("\n").each do |line|
       parts = line.split('|').map &:strip
       next unless parts[0] =~ /^\d+/
@@ -53,6 +64,7 @@ private
   end
 
   def connect
+    # puts "connecting to #{@host}:#{@options[:port]}"
     @connection = Net::Telnet::new(
       'Host' => @host,
       'Port' => @options[:port],
@@ -64,15 +76,20 @@ private
   end
 
   def disconnect
-    @connection.close if @connection
+    begin
+      @connection.close if @connection
+    rescue
+      # do nothing
+    end
   end
 
-  def with_connection
+  def with_connection options = {}
     begin
       connect
       output = yield
     rescue Exception => e
-      output = "ERROR! #{e.message}"
+      puts "ERROR! #{e.message}"
+      output = options[:default] if options[:default]
     ensure
       disconnect
     end

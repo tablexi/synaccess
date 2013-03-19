@@ -1,4 +1,4 @@
-class RevA < NetBooter::TelnetConnection
+class NetBooter::Telnet::RevA < NetBooter::TelnetConnection
 
   def override_options
     {
@@ -7,10 +7,8 @@ class RevA < NetBooter::TelnetConnection
     }
   end
 
-  def statuses
-    with_connection do
-      parse_status @connection.cmd("pshow")
-    end
+  def local_statuses
+    parse_status @connection.cmd("pshow")
   end
 
 private

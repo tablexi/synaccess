@@ -1,10 +1,8 @@
-class RevB < NetBooter::TelnetConnection
-  def statuses
-    with_connection do
-      @connection.cmd("")
-      sleep 0.1
-      parse_status @connection.cmd("pshow")
-    end
+class NetBooter::Telnet::RevB < NetBooter::TelnetConnection
+  def local_statuses
+    @connection.cmd("")
+    sleep 0.25
+    parse_status @connection.cmd("pshow")
   end
 
 private
