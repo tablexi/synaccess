@@ -64,15 +64,16 @@ private
   end
 
   def connect
-    # puts "connecting to #{@host}:#{@options[:port]}"
-    @connection = Net::Telnet::new(
-      'Host' => @host,
-      'Port' => @options[:port],
-      'Binmode' => @options[:binmode],
-      'Prompt' => @options[:prompt],
-      'Timeout' => @options[:timeout]
-    )
-    authenticate if @options[:username] && @options[:password]
+    retry_block 5 do
+      @connection = Net::Telnet::new(
+        'Host' => @host,
+        'Port' => @options[:port],
+        'Binmode' => @options[:binmode],
+        'Prompt' => @options[:prompt],
+        'Timeout' => @options[:timeout]
+      )
+      authenticate if @options[:username] && @options[:password]
+    end
   end
 
   def disconnect
@@ -86,15 +87,29 @@ private
   def with_connection options = {}
     begin
       connect
+      raise Exception.new('Unable to connect') if @connection.nil?
       output = yield
     rescue Exception => e
       puts "ERROR! #{e.message}"
+      # puts e.backtrace.join("\n")
       output = options[:default] if options[:default]
     ensure
       disconnect
     end
 
     output
+  end
+
+  def retry_block max_attempts, options = {}
+    max_attempts.times do |i|
+      begin
+        yield
+        break # if we made it through the yield without an error we can break
+      rescue Exception => e
+        puts e.message
+        raise e if i + 1 >= max_attempts
+      end
+    end
   end
 
 end
