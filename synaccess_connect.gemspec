@@ -15,4 +15,10 @@ Gem::Specification.new do |gem|
   gem.name          = "synaccess_connect"
   gem.require_paths = ["lib"]
   gem.version       = "0.1.0"
+
+  gem.add_dependency 'nokogiri', '~> 1.5.8'
+
+  gem.add_development_dependency 'rspec',   '~> 2.13.0'
+  gem.add_development_dependency 'vcr',     '~> 2.4.0'
+  gem.add_development_dependency 'webmock', '~> 1.11.0'
 end

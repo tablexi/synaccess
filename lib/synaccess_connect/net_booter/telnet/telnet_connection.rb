@@ -35,7 +35,7 @@ class NetBooter::TelnetConnection
     toggle(false, outlet)
   end
 
-  def toggle(status, outlet = 1)
+  def toggle(outlet, status)
     status_string = status ? '1' : '0'
     with_connection do
       @connection.cmd("pset #{outlet} #{status_string}")

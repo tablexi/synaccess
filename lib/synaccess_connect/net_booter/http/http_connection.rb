@@ -16,17 +16,16 @@ class NetBooter::HttpConnection
   end
 
   def toggle_on(outlet = 1)
-    toggle(true, outlet)
+    toggle(outlet, true)
   end
 
   def toggle_off(outlet = 1)
-    toggle(false, outlet)
+    toggle(outlet, false)
   end
 
-  def toggle(status, outlet = 1)
+  def toggle(outlet, status)
     current_status = status(outlet)
     toggle_relay(outlet) if current_status != status
-    puts "toggle should now be: #{status}"
     status
   end
 

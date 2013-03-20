@@ -15,7 +15,6 @@ class NetBooter::Http::RevB < NetBooter::HttpConnection
         status[$1.to_i + 1] = node.content == '1' ? true : false
       end
     end
-    puts status
     status
   end
 end
