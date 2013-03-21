@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = version
 
-  gem.add_dependency 'nokogiri', '~> 1.5.8'
+  gem.add_dependency 'nokogiri', '~> 1.4.4'
 
   gem.add_development_dependency 'rspec',   '~> 2.13.0'
   gem.add_development_dependency 'vcr',     '~> 2.4.0'
