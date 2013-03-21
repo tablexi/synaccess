@@ -82,6 +82,10 @@ private
     rescue
       # do nothing
     end
+    # needs a little bit of delay after disconnecting
+    # if so the next connection doesn't get refused while
+    # this one is closing. Number arrived at by experimentation
+    sleep 0.02
   end
 
   def with_connection options = {}
