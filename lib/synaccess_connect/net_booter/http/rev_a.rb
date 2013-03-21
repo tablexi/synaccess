@@ -1,7 +1,7 @@
 class NetBooter::Http::RevA < NetBooter::HttpConnection
   # So here's the deal... When you hit the switch page (pwrSw1.cgi) nothing happens.
   # It's only when hitting the status page AFTER visiting a swith page that
-  # the relay is toggled.  I want to beat the Synaccess devs with a baseball bat.
+  # the relay is toggled.
   def toggle_relay(outlet)
     get_request("/pwrSw#{outlet}.cgi")
     get_request("/synOpStatus.shtml")
