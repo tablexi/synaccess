@@ -1,318 +1,148 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: get
     uri: http://admin:admin@192.168.10.20/status.xml
-    body: 
+    body:
       encoding: US-ASCII
-      string: ""
-    headers: 
-      Accept: 
-      - "*/*"
-      User-Agent: 
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Connection: 
+    headers:
+      Connection:
       - close
-      Content-Type: 
+      Content-Type:
       - text/xml
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-    body: 
+    body:
       encoding: US-ASCII
-      string: |
-        <response>
-        <rly1>0</rly1>
-        <rly2>0</rly2>
-        <rly3>0</rly3>
-        <rly4>0</rly4>
-        <rly5>0</rly5>
-        <rly6>0</rly6>
-        <rly7>0</rly7>
-        <rly0>1</rly0>
-        <ac0></ac0>
-        <ac1></ac1>
-        <tp0></tp0>
-        <tp1></tp1>
-        <tp2></tp2>
-        <tp3>Time: 03/20/2013-15:17:13 Login as: admin</tp3>
-        <apa30>0/0</apa30>
-        <apa50>0</apa50>
-        <apa31>0/0</apa31>
-        <apa51>0</apa51>
-        <apa32>0</apa32>
-        <apa52>0</apa52>
-        <apa33>0</apa33>
-        <apa53>0</apa53>
-        
-        <apa34>0</apa34>
-        <apa54>0</apa54>
-        <apa35>0</apa35>
-        <apa55>0</apa55>
-        <apa36>0</apa36>
-        <apa56>0</apa56>
-        <apa37>0</apa37>
-        <apa57>0</apa57>
-        
-        <err1>.</err1>
-        </response>  
-
+      string: ! "<response>\r\n<rly1>0</rly1>\r\n<rly2>0</rly2>\r\n<rly3>0</rly3>\r\n<rly4>0</rly4>\r\n<rly5>0</rly5>\r\n<rly6>0</rly6>\r\n<rly7>0</rly7>\r\n<rly0>1</rly0>\r\n<ac0></ac0>\r\n<ac1></ac1>\r\n<tp0></tp0>\r\n<tp1></tp1>\r\n<tp2></tp2>\r\n<tp3>Time:
+        03/12/2014-15:49:42 Login as: admin</tp3>\r\n<apa30>0/0</apa30>\r\n<apa50>0</apa50>\r\n<apa31>0/0</apa31>\r\n<apa51>0</apa51>\r\n<apa32>0</apa32>\r\n<apa52>0</apa52>\r\n<apa33>0</apa33>\r\n<apa53>0</apa53>\r\n\r\n<apa34>0</apa34>\r\n<apa54>0</apa54>\r\n<apa35>0</apa35>\r\n<apa55>0</apa55>\r\n<apa36>0</apa36>\r\n<apa56>0</apa56>\r\n<apa37>0</apa37>\r\n<apa57>0</apa57>\r\n\r\n<err1>.</err1>\r\n</response>
+        \ \r\n"
     http_version: 
-  recorded_at: Wed, 20 Mar 2013 23:10:08 GMT
-- request: 
+  recorded_at: Wed, 12 Mar 2014 23:27:03 GMT
+- request:
     method: get
     uri: http://admin:admin@192.168.10.20/status.xml
-    body: 
+    body:
       encoding: US-ASCII
-      string: ""
-    headers: 
-      Accept: 
-      - "*/*"
-      User-Agent: 
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Connection: 
+    headers:
+      Connection:
       - close
-      Content-Type: 
+      Content-Type:
       - text/xml
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-    body: 
+    body:
       encoding: US-ASCII
-      string: |
-        <response>
-        <rly1>0</rly1>
-        <rly2>0</rly2>
-        <rly3>0</rly3>
-        <rly4>0</rly4>
-        <rly5>0</rly5>
-        <rly6>0</rly6>
-        <rly7>0</rly7>
-        <rly0>1</rly0>
-        <ac0></ac0>
-        <ac1></ac1>
-        <tp0></tp0>
-        <tp1></tp1>
-        <tp2></tp2>
-        <tp3>Time: 03/20/2013-15:17:13 Login as: admin</tp3>
-        <apa30>0/0</apa30>
-        <apa50>0</apa50>
-        <apa31>0/0</apa31>
-        <apa51>0</apa51>
-        <apa32>0</apa32>
-        <apa52>0</apa52>
-        <apa33>0</apa33>
-        <apa53>0</apa53>
-        
-        <apa34>0</apa34>
-        <apa54>0</apa54>
-        <apa35>0</apa35>
-        <apa55>0</apa55>
-        <apa36>0</apa36>
-        <apa56>0</apa56>
-        <apa37>0</apa37>
-        <apa57>0</apa57>
-        
-        <err1>.</err1>
-        </response>  
-
+      string: ! "<response>\r\n<rly1>0</rly1>\r\n<rly2>0</rly2>\r\n<rly3>0</rly3>\r\n<rly4>0</rly4>\r\n<rly5>0</rly5>\r\n<rly6>0</rly6>\r\n<rly7>0</rly7>\r\n<rly0>1</rly0>\r\n<ac0></ac0>\r\n<ac1></ac1>\r\n<tp0></tp0>\r\n<tp1></tp1>\r\n<tp2></tp2>\r\n<tp3>Time:
+        03/12/2014-15:49:42 Login as: admin</tp3>\r\n<apa30>0/0</apa30>\r\n<apa50>0</apa50>\r\n<apa31>0/0</apa31>\r\n<apa51>0</apa51>\r\n<apa32>0</apa32>\r\n<apa52>0</apa52>\r\n<apa33>0</apa33>\r\n<apa53>0</apa53>\r\n\r\n<apa34>0</apa34>\r\n<apa54>0</apa54>\r\n<apa35>0</apa35>\r\n<apa55>0</apa55>\r\n<apa36>0</apa36>\r\n<apa56>0</apa56>\r\n<apa37>0</apa37>\r\n<apa57>0</apa57>\r\n\r\n<err1>.</err1>\r\n</response>
+        \ \r\n"
     http_version: 
-  recorded_at: Wed, 20 Mar 2013 23:10:09 GMT
-- request: 
+  recorded_at: Wed, 12 Mar 2014 23:27:04 GMT
+- request:
     method: get
     uri: http://admin:admin@192.168.10.20/status.xml
-    body: 
+    body:
       encoding: US-ASCII
-      string: ""
-    headers: 
-      Accept: 
-      - "*/*"
-      User-Agent: 
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Connection: 
+    headers:
+      Connection:
       - close
-      Content-Type: 
+      Content-Type:
       - text/xml
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-    body: 
+    body:
       encoding: US-ASCII
-      string: |
-        <response>
-        <rly1>0</rly1>
-        <rly2>0</rly2>
-        <rly3>0</rly3>
-        <rly4>0</rly4>
-        <rly5>0</rly5>
-        <rly6>0</rly6>
-        <rly7>0</rly7>
-        <rly0>1</rly0>
-        <ac0></ac0>
-        <ac1></ac1>
-        <tp0></tp0>
-        <tp1></tp1>
-        <tp2></tp2>
-        <tp3>Time: 03/20/2013-15:17:13 Login as: admin</tp3>
-        <apa30>0/0</apa30>
-        <apa50>0</apa50>
-        <apa31>0/0</apa31>
-        <apa51>0</apa51>
-        <apa32>0</apa32>
-        <apa52>0</apa52>
-        <apa33>0</apa33>
-        <apa53>0</apa53>
-        
-        <apa34>0</apa34>
-        <apa54>0</apa54>
-        <apa35>0</apa35>
-        <apa55>0</apa55>
-        <apa36>0</apa36>
-        <apa56>0</apa56>
-        <apa37>0</apa37>
-        <apa57>0</apa57>
-        
-        <err1>.</err1>
-        </response>  
-
+      string: ! "<response>\r\n<rly1>0</rly1>\r\n<rly2>0</rly2>\r\n<rly3>0</rly3>\r\n<rly4>0</rly4>\r\n<rly5>0</rly5>\r\n<rly6>0</rly6>\r\n<rly7>0</rly7>\r\n<rly0>1</rly0>\r\n<ac0></ac0>\r\n<ac1></ac1>\r\n<tp0></tp0>\r\n<tp1></tp1>\r\n<tp2></tp2>\r\n<tp3>Time:
+        03/12/2014-15:49:42 Login as: admin</tp3>\r\n<apa30>0/0</apa30>\r\n<apa50>0</apa50>\r\n<apa31>0/0</apa31>\r\n<apa51>0</apa51>\r\n<apa32>0</apa32>\r\n<apa52>0</apa52>\r\n<apa33>0</apa33>\r\n<apa53>0</apa53>\r\n\r\n<apa34>0</apa34>\r\n<apa54>0</apa54>\r\n<apa35>0</apa35>\r\n<apa55>0</apa55>\r\n<apa36>0</apa36>\r\n<apa56>0</apa56>\r\n<apa37>0</apa37>\r\n<apa57>0</apa57>\r\n\r\n<err1>.</err1>\r\n</response>
+        \ \r\n"
     http_version: 
-  recorded_at: Wed, 20 Mar 2013 23:10:09 GMT
-- request: 
+  recorded_at: Wed, 12 Mar 2014 23:27:04 GMT
+- request:
     method: get
     uri: http://admin:admin@192.168.10.20/status.xml
-    body: 
+    body:
       encoding: US-ASCII
-      string: ""
-    headers: 
-      Accept: 
-      - "*/*"
-      User-Agent: 
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Connection: 
+    headers:
+      Connection:
       - close
-      Content-Type: 
+      Content-Type:
       - text/xml
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-    body: 
+    body:
       encoding: US-ASCII
-      string: |
-        <response>
-        <rly1>0</rly1>
-        <rly2>0</rly2>
-        <rly3>0</rly3>
-        <rly4>0</rly4>
-        <rly5>0</rly5>
-        <rly6>0</rly6>
-        <rly7>0</rly7>
-        <rly0>1</rly0>
-        <ac0></ac0>
-        <ac1></ac1>
-        <tp0></tp0>
-        <tp1></tp1>
-        <tp2></tp2>
-        <tp3>Time: 03/20/2013-15:17:13 Login as: admin</tp3>
-        <apa30>0/0</apa30>
-        <apa50>0</apa50>
-        <apa31>0/0</apa31>
-        <apa51>0</apa51>
-        <apa32>0</apa32>
-        <apa52>0</apa52>
-        <apa33>0</apa33>
-        <apa53>0</apa53>
-        
-        <apa34>0</apa34>
-        <apa54>0</apa54>
-        <apa35>0</apa35>
-        <apa55>0</apa55>
-        <apa36>0</apa36>
-        <apa56>0</apa56>
-        <apa37>0</apa37>
-        <apa57>0</apa57>
-        
-        <err1>.</err1>
-        </response>  
-
+      string: ! "<response>\r\n<rly1>0</rly1>\r\n<rly2>0</rly2>\r\n<rly3>0</rly3>\r\n<rly4>0</rly4>\r\n<rly5>0</rly5>\r\n<rly6>0</rly6>\r\n<rly7>0</rly7>\r\n<rly0>1</rly0>\r\n<ac0></ac0>\r\n<ac1></ac1>\r\n<tp0></tp0>\r\n<tp1></tp1>\r\n<tp2></tp2>\r\n<tp3>Time:
+        03/12/2014-15:49:42 Login as: admin</tp3>\r\n<apa30>0/0</apa30>\r\n<apa50>0</apa50>\r\n<apa31>0/0</apa31>\r\n<apa51>0</apa51>\r\n<apa32>0</apa32>\r\n<apa52>0</apa52>\r\n<apa33>0</apa33>\r\n<apa53>0</apa53>\r\n\r\n<apa34>0</apa34>\r\n<apa54>0</apa54>\r\n<apa35>0</apa35>\r\n<apa55>0</apa55>\r\n<apa36>0</apa36>\r\n<apa56>0</apa56>\r\n<apa37>0</apa37>\r\n<apa57>0</apa57>\r\n\r\n<err1>.</err1>\r\n</response>
+        \ \r\n"
     http_version: 
-  recorded_at: Wed, 20 Mar 2013 23:10:09 GMT
-- request: 
+  recorded_at: Wed, 12 Mar 2014 23:27:04 GMT
+- request:
     method: get
     uri: http://admin:admin@192.168.10.20/status.xml
-    body: 
+    body:
       encoding: US-ASCII
-      string: ""
-    headers: 
-      Accept: 
-      - "*/*"
-      User-Agent: 
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Connection: 
+    headers:
+      Connection:
       - close
-      Content-Type: 
+      Content-Type:
       - text/xml
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-    body: 
+    body:
       encoding: US-ASCII
-      string: |
-        <response>
-        <rly1>0</rly1>
-        <rly2>0</rly2>
-        <rly3>0</rly3>
-        <rly4>0</rly4>
-        <rly5>0</rly5>
-        <rly6>0</rly6>
-        <rly7>0</rly7>
-        <rly0>1</rly0>
-        <ac0></ac0>
-        <ac1></ac1>
-        <tp0></tp0>
-        <tp1></tp1>
-        <tp2></tp2>
-        <tp3>Time: 03/20/2013-15:17:13 Login as: admin</tp3>
-        <apa30>0/0</apa30>
-        <apa50>0</apa50>
-        <apa31>0/0</apa31>
-        <apa51>0</apa51>
-        <apa32>0</apa32>
-        <apa52>0</apa52>
-        <apa33>0</apa33>
-        <apa53>0</apa53>
-        
-        <apa34>0</apa34>
-        <apa54>0</apa54>
-        <apa35>0</apa35>
-        <apa55>0</apa55>
-        <apa36>0</apa36>
-        <apa56>0</apa56>
-        <apa37>0</apa37>
-        <apa57>0</apa57>
-        
-        <err1>.</err1>
-        </response>  
-
+      string: ! "<response>\r\n<rly1>0</rly1>\r\n<rly2>0</rly2>\r\n<rly3>0</rly3>\r\n<rly4>0</rly4>\r\n<rly5>0</rly5>\r\n<rly6>0</rly6>\r\n<rly7>0</rly7>\r\n<rly0>1</rly0>\r\n<ac0></ac0>\r\n<ac1></ac1>\r\n<tp0></tp0>\r\n<tp1></tp1>\r\n<tp2></tp2>\r\n<tp3>Time:
+        03/12/2014-15:49:42 Login as: admin</tp3>\r\n<apa30>0/0</apa30>\r\n<apa50>0</apa50>\r\n<apa31>0/0</apa31>\r\n<apa51>0</apa51>\r\n<apa32>0</apa32>\r\n<apa52>0</apa52>\r\n<apa33>0</apa33>\r\n<apa53>0</apa53>\r\n\r\n<apa34>0</apa34>\r\n<apa54>0</apa54>\r\n<apa35>0</apa35>\r\n<apa55>0</apa55>\r\n<apa36>0</apa36>\r\n<apa56>0</apa56>\r\n<apa37>0</apa37>\r\n<apa57>0</apa57>\r\n\r\n<err1>.</err1>\r\n</response>
+        \ \r\n"
     http_version: 
-  recorded_at: Wed, 20 Mar 2013 23:10:09 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Wed, 12 Mar 2014 23:27:04 GMT
+recorded_with: VCR 2.8.0
