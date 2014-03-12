@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    synaccess_connect (0.2.1)
-      nokogiri
+    synaccess_connect (0.2.2)
+      nokogiri (> 1.5)
 
 GEM
   remote: https://rubygems.org/
@@ -32,7 +32,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rspec
+  rspec (> 2.14)
   synaccess_connect!
-  vcr
+  vcr (~> 2.8.0)
   webmock (< 1.16)

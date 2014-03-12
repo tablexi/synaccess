@@ -15,9 +15,9 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = version
 
-  gem.add_dependency 'nokogiri', '~> 0'
+  gem.add_dependency 'nokogiri', '> 1.5'
 
-  gem.add_development_dependency 'rspec', '~> 0'
-  gem.add_development_dependency 'vcr', '~> 0'
+  gem.add_development_dependency 'rspec', '> 2.14'
+  gem.add_development_dependency 'vcr', '~> 2.8.0'
   gem.add_development_dependency 'webmock', '< 1.16'
 end
