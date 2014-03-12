@@ -22,7 +22,7 @@ class NetBooter::HttpConnection
   # boolean - on/off status of the outlet
   def status(outlet = 1)
     statuses.fetch outlet do
-      raise Exception.new('Error communicating with relay')
+      raise NetBooter::Error.new('Error communicating with relay')
     end
   end
 
@@ -102,9 +102,8 @@ private
       Timeout::timeout(5) do
         resp = do_http_request(path)
       end
-    rescue Exception => e
-      puts e.message
-      raise Exception.new("Error connecting to relay: #{e.message}")
+    rescue => e
+      raise NetBooter::Error.new("Error connecting to relay: #{e.message}")
     end
     resp
   end
@@ -120,7 +119,7 @@ private
 
       # Error checking. Allow 200s and 302s
       unless ['200', '302'].include? resp.code
-        raise Exception.new "Relay responded with #{resp.code}. Perhaps you have the wrong relay type specified."
+        raise NetBooter::Error.new "Relay responded with #{resp.code}. Perhaps you have the wrong relay type specified."
       end
     end
     resp
