@@ -39,6 +39,13 @@ shared_examples_for 'RelayConnection' do
     end
   end
 
+  describe '#status' do
+    it 'should raise an error if connection times out' do
+      expect_any_instance_of(NetBooter::HttpConnection).to receive(:do_http_request).and_raise(Timeout::Error)
+      expect { relay.status(1) }.to raise_error(NetBooter::Error)
+    end
+  end
+
   describe '#toggle', :vcr do
     before(:each) { default_initial_state }
 

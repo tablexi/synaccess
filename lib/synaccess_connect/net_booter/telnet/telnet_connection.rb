@@ -17,7 +17,7 @@ class NetBooter::TelnetConnection
 
   def status(outlet = 1)
     statuses.fetch outlet do
-      raise Exception.new('Error communicating with relay')
+      raise NetBooter::Error.new('Error communicating with relay')
     end
   end
 
@@ -91,9 +91,9 @@ private
   def with_connection options = {}
     begin
       connect
-      raise Exception.new('Unable to connect') if @connection.nil?
+      raise NetBooter::Error.new('Unable to connect') if @connection.nil?
       output = yield
-    rescue Exception => e
+    rescue => e
       puts "ERROR! #{e.message}"
       # puts e.backtrace.join("\n")
       output = options[:default] if options[:default]
@@ -109,7 +109,7 @@ private
       begin
         yield
         break # if we made it through the yield without an error we can break
-      rescue Exception => e
+      rescue => e
         puts e.message
         raise e if i + 1 >= max_attempts
       end

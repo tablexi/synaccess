@@ -1,37 +1,38 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: get
     uri: http://admin:admin@192.168.10.21/synOpStatus.shtml
-    body: 
+    body:
       encoding: US-ASCII
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - "*/*"
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Date: 
+    headers:
+      Date:
       - Wed, 20 Mar 2013 18:18:28 GMT
-      Server: 
+      Server:
       - Synaccess
-      Connection: 
+      Connection:
       - close
-      Content-Type: 
+      Content-Type:
       - text/html
-    body: 
+    body:
       encoding: US-ASCII
       string: |-
         <html>
         <body>
         </html>
         <html><body text="#800000" bgcolor="#FFFFFF" link="#800000">
-        <CENTER> <H1>System Operation Status</H1><FORM ACTION="serPortGraph.cgi" METHOD="POST">
+
+        <CENTER> <H1>System Operation Status</H1><FORM ACTION="serPortGraph.cgi" METHOD="POST">
         </table><P ALIGN="CENTER"><INPUT TYPE="button" VALUE="Refresh" onClick="parent.location='index.shtml'"></p><TABLE BORDER><TR><TH colspan="6"><font size="5">Power Outlets</font>
          <TR><TH>Port #<TH>On/Off<TH>Reboot<TH>Status<TH>Port Name<TH>Reservation
          <TR><TH>1<TH><A HREF="/pwrSw1.cgi"><img SRC="button.gif"></A><TH>
@@ -40,40 +41,41 @@ http_interactions:
         <A HREF="/pwrRb2.cgi"><img SRC="button.gif" ></A><TH><img SRC="ledoff.gif"><TH>Undefined<TH>Open
         </TD></TABLE><P><p>Reboot duration is 5 seconds.</p>  </center>
         </body>
-    http_version: 
+    http_version:
   recorded_at: Wed, 20 Mar 2013 23:19:33 GMT
-- request: 
+- request:
     method: get
     uri: http://admin:admin@192.168.10.21/synOpStatus.shtml
-    body: 
+    body:
       encoding: US-ASCII
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - "*/*"
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Date: 
+    headers:
+      Date:
       - Wed, 20 Mar 2013 18:18:28 GMT
-      Server: 
+      Server:
       - Synaccess
-      Connection: 
+      Connection:
       - close
-      Content-Type: 
+      Content-Type:
       - text/html
-    body: 
+    body:
       encoding: US-ASCII
       string: |-
         <html>
         <body>
         </html>
         <html><body text="#800000" bgcolor="#FFFFFF" link="#800000">
-        <CENTER> <H1>System Operation Status</H1><FORM ACTION="serPortGraph.cgi" METHOD="POST">
+
+        <CENTER> <H1>System Operation Status</H1><FORM ACTION="serPortGraph.cgi" METHOD="POST">
         </table><P ALIGN="CENTER"><INPUT TYPE="button" VALUE="Refresh" onClick="parent.location='index.shtml'"></p><TABLE BORDER><TR><TH colspan="6"><font size="5">Power Outlets</font>
          <TR><TH>Port #<TH>On/Off<TH>Reboot<TH>Status<TH>Port Name<TH>Reservation
          <TR><TH>1<TH><A HREF="/pwrSw1.cgi"><img SRC="button.gif"></A><TH>
@@ -82,40 +84,41 @@ http_interactions:
         <A HREF="/pwrRb2.cgi"><img SRC="button.gif" ></A><TH><img SRC="ledoff.gif"><TH>Undefined<TH>Open
         </TD></TABLE><P><p>Reboot duration is 5 seconds.</p>  </center>
         </body>
-    http_version: 
+    http_version:
   recorded_at: Wed, 20 Mar 2013 23:19:33 GMT
-- request: 
+- request:
     method: get
     uri: http://admin:admin@192.168.10.21/synOpStatus.shtml
-    body: 
+    body:
       encoding: US-ASCII
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - "*/*"
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Date: 
+    headers:
+      Date:
       - Wed, 20 Mar 2013 18:18:28 GMT
-      Server: 
+      Server:
       - Synaccess
-      Connection: 
+      Connection:
       - close
-      Content-Type: 
+      Content-Type:
       - text/html
-    body: 
+    body:
       encoding: US-ASCII
       string: |-
         <html>
         <body>
         </html>
         <html><body text="#800000" bgcolor="#FFFFFF" link="#800000">
-        <CENTER> <H1>System Operation Status</H1><FORM ACTION="serPortGraph.cgi" METHOD="POST">
+
+        <CENTER> <H1>System Operation Status</H1><FORM ACTION="serPortGraph.cgi" METHOD="POST">
         </table><P ALIGN="CENTER"><INPUT TYPE="button" VALUE="Refresh" onClick="parent.location='index.shtml'"></p><TABLE BORDER><TR><TH colspan="6"><font size="5">Power Outlets</font>
          <TR><TH>Port #<TH>On/Off<TH>Reboot<TH>Status<TH>Port Name<TH>Reservation
          <TR><TH>1<TH><A HREF="/pwrSw1.cgi"><img SRC="button.gif"></A><TH>
@@ -124,40 +127,41 @@ http_interactions:
         <A HREF="/pwrRb2.cgi"><img SRC="button.gif" ></A><TH><img SRC="ledoff.gif"><TH>Undefined<TH>Open
         </TD></TABLE><P><p>Reboot duration is 5 seconds.</p>  </center>
         </body>
-    http_version: 
+    http_version:
   recorded_at: Wed, 20 Mar 2013 23:19:33 GMT
-- request: 
+- request:
     method: get
     uri: http://admin:admin@192.168.10.21/synOpStatus.shtml
-    body: 
+    body:
       encoding: US-ASCII
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - "*/*"
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Date: 
+    headers:
+      Date:
       - Wed, 20 Mar 2013 18:18:28 GMT
-      Server: 
+      Server:
       - Synaccess
-      Connection: 
+      Connection:
       - close
-      Content-Type: 
+      Content-Type:
       - text/html
-    body: 
+    body:
       encoding: US-ASCII
       string: |-
         <html>
         <body>
         </html>
         <html><body text="#800000" bgcolor="#FFFFFF" link="#800000">
-        <CENTER> <H1>System Operation Status</H1><FORM ACTION="serPortGraph.cgi" METHOD="POST">
+
+        <CENTER> <H1>System Operation Status</H1><FORM ACTION="serPortGraph.cgi" METHOD="POST">
         </table><P ALIGN="CENTER"><INPUT TYPE="button" VALUE="Refresh" onClick="parent.location='index.shtml'"></p><TABLE BORDER><TR><TH colspan="6"><font size="5">Power Outlets</font>
          <TR><TH>Port #<TH>On/Off<TH>Reboot<TH>Status<TH>Port Name<TH>Reservation
          <TR><TH>1<TH><A HREF="/pwrSw1.cgi"><img SRC="button.gif"></A><TH>
@@ -166,73 +170,74 @@ http_interactions:
         <A HREF="/pwrRb2.cgi"><img SRC="button.gif" ></A><TH><img SRC="ledoff.gif"><TH>Undefined<TH>Open
         </TD></TABLE><P><p>Reboot duration is 5 seconds.</p>  </center>
         </body>
-    http_version: 
+    http_version:
   recorded_at: Wed, 20 Mar 2013 23:19:33 GMT
-- request: 
+- request:
     method: get
     uri: http://admin:admin@192.168.10.21/pwrSw1.cgi
-    body: 
+    body:
       encoding: US-ASCII
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - "*/*"
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 302
       message: Found
-    headers: 
-      Date: 
+    headers:
+      Date:
       - Wed, 20 Mar 2013 18:18:28 GMT
-      Server: 
+      Server:
       - Synaccess
-      Connection: 
+      Connection:
       - close
-      Content-Type: 
+      Content-Type:
       - text/html
-      Location: 
+      Location:
       - synOpStatus.shtml
-    body: 
+    body:
       encoding: US-ASCII
       string: |-
         <HTML><HEAD><TITLE>302 Found</TITLE></HEAD><BODY>302 Found</BODY></HTML><HTML><HEAD><TITLE>Document has moved</TITLE></HEAD>
         <BODY>Document has moved <A HREF="synOpStatus.shtml">here</A></BODY></HTML>
-    http_version: 
+    http_version:
   recorded_at: Wed, 20 Mar 2013 23:19:33 GMT
-- request: 
+- request:
     method: get
     uri: http://admin:admin@192.168.10.21/synOpStatus.shtml
-    body: 
+    body:
       encoding: US-ASCII
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - "*/*"
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Date: 
+    headers:
+      Date:
       - Wed, 20 Mar 2013 18:18:29 GMT
-      Server: 
+      Server:
       - Synaccess
-      Connection: 
+      Connection:
       - close
-      Content-Type: 
+      Content-Type:
       - text/html
-    body: 
+    body:
       encoding: US-ASCII
       string: |-
         <html>
         <body>
         </html>
         <html><body text="#800000" bgcolor="#FFFFFF" link="#800000">
-        <CENTER> <H1>System Operation Status</H1><FORM ACTION="serPortGraph.cgi" METHOD="POST">
+
+        <CENTER> <H1>System Operation Status</H1><FORM ACTION="serPortGraph.cgi" METHOD="POST">
         </table><P ALIGN="CENTER"><INPUT TYPE="button" VALUE="Refresh" onClick="parent.location='index.shtml'"></p><TABLE BORDER><TR><TH colspan="6"><font size="5">Power Outlets</font>
          <TR><TH>Port #<TH>On/Off<TH>Reboot<TH>Status<TH>Port Name<TH>Reservation
          <TR><TH>1<TH><A HREF="/pwrSw1.cgi"><img SRC="button.gif"></A><TH>
@@ -241,6 +246,6 @@ http_interactions:
         <A HREF="/pwrRb2.cgi"><img SRC="button.gif" ></A><TH><img SRC="ledoff.gif"><TH>Undefined<TH>Open
         </TD></TABLE><P><p>Reboot duration is 5 seconds.</p>  </center>
         </body>
-    http_version: 
+    http_version:
   recorded_at: Wed, 20 Mar 2013 23:19:34 GMT
 recorded_with: VCR 2.4.0
