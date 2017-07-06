@@ -36,3 +36,6 @@ DEPENDENCIES
   synaccess_connect!
   vcr (~> 2.8.0)
   webmock (< 1.16)
+
+BUNDLED WITH
+   1.15.1
