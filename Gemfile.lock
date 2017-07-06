@@ -37,7 +37,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rspec (> 2.99)
+  rspec (>= 3.6)
   synaccess_connect!
   vcr (~> 2.8.0)
   webmock (< 1.16)

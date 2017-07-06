@@ -9,11 +9,7 @@ require 'synaccess_connect'
 Dir["spec/support/**/*.rb"].each { |f| require File.expand_path(f) }
 
 RSpec.configure do |config|
-  # config.mock_framework = :mocha
 
-  # config.include DeclarationMatchers
+  config.disable_monkey_patching!
 
-  # config.after do
-  #   FactoryGirl.reload
-  # end
 end
