@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
@@ -19,7 +20,7 @@ Gem::Specification.new do |gem|
 
   gem.require_paths = ["lib"]
 
-  gem.add_dependency 'nokogiri', '> 1.5'
+  gem.add_dependency 'nokogiri', '> 1.6'
 
   gem.add_development_dependency 'rspec', '> 2.14'
   gem.add_development_dependency 'vcr', '~> 2.8.0'
