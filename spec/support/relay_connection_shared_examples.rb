@@ -3,7 +3,7 @@ shared_examples_for 'RelayConnection' do
     relay.toggle(1, true)
     relay.toggle(2, false)
     # confirm the initial state is correct
-    relay.statuses.should include( 1 => true, 2 => false )
+    expect(relay.statuses).to include( 1 => true, 2 => false )
   end
 
   describe '#statuses', :vcr do
@@ -11,19 +11,19 @@ shared_examples_for 'RelayConnection' do
     before(:each) { default_initial_state }
 
     it 'should return a hash' do
-      statuses.should be_a Hash
+      expect(statuses).to be_a Hash
     end
 
     it 'should return outlet one as on' do
-      statuses[1].should == true
+      expect(statuses[1]).to eq(true)
     end
 
     it 'should return outlet two as off' do
-      statuses[2].should == false
+      expect(statuses[2]).to eq(false)
     end
 
     it 'should not have an outlet zero' do
-      statuses[0].should be_nil
+      expect(statuses[0]).to be_nil
     end
   end
 
@@ -31,11 +31,11 @@ shared_examples_for 'RelayConnection' do
     before(:each) { default_initial_state }
 
     it 'should return true for outlet 1' do
-      relay.status(1).should == true
+      expect(relay.status(1)).to eq(true)
     end
 
     it 'should return false for outlet 2' do
-      relay.status(2).should == false
+      expect(relay.status(2)).to eq(false)
     end
   end
 
@@ -55,15 +55,15 @@ shared_examples_for 'RelayConnection' do
         let!(:response) { relay.toggle(outlet, true) }
 
         it 'should return true' do
-          response.should == true
+          expect(response).to eq(true)
         end
 
         it 'should still have the old status' do
-          relay.status(outlet).should == true
+          expect(relay.status(outlet)).to eq(true)
         end
 
         it 'should have left the other outlet alone' do
-          relay.status(2).should == false
+          expect(relay.status(2)).to eq(false)
         end
       end
 
@@ -72,15 +72,15 @@ shared_examples_for 'RelayConnection' do
         let!(:response) { relay.toggle(outlet, true) }
 
         it 'should return true' do
-          response.should == true
+          expect(response).to eq(true)
         end
 
         it 'should be the new status' do
-          relay.status(outlet).should == true
+          expect(relay.status(outlet)).to eq(true)
         end
 
         it 'should have left the other outlet alone' do
-          relay.status(1).should == true
+          expect(relay.status(1)).to eq(true)
         end
       end
     end
@@ -92,15 +92,15 @@ shared_examples_for 'RelayConnection' do
         let!(:response) { relay.toggle(outlet, false) }
 
         it 'should return false' do
-          response.should == false
+          expect(response).to eq(false)
         end
 
         it 'should still have the old status' do
-          relay.status(outlet).should == false
+          expect(relay.status(outlet)).to eq(false)
         end
 
         it 'should have left the other outlet alone' do
-          relay.status(1).should == true
+          expect(relay.status(1)).to eq(true)
         end
       end
 
@@ -109,15 +109,15 @@ shared_examples_for 'RelayConnection' do
         let!(:response) { relay.toggle(outlet, false) }
 
         it 'should return false' do
-          response.should == false
+          expect(response).to eq(false)
         end
 
         it 'should be the new status' do
-          relay.status(outlet).should == false
+          expect(relay.status(outlet)).to eq(false)
         end
 
         it 'should have left the other outlet alone' do
-          relay.status(2).should == false
+          expect(relay.status(2)).to eq(false)
         end
       end
     end
