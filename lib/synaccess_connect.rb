@@ -1,34 +1,6 @@
-module NetBooter
-  module Telnet
-  end
-  module Http
-  end
-end
-
 require 'synaccess_connect/net_booter/error'
-require 'synaccess_connect/net_booter/telnet/telnet_connection'
-require 'synaccess_connect/net_booter/telnet/rev_a'
-require 'synaccess_connect/net_booter/telnet/rev_b'
+require 'synaccess_connect/net_booter/http'
+require 'synaccess_connect/net_booter/telnet'
 
-require 'synaccess_connect/net_booter/http/http_connection'
-require 'synaccess_connect/net_booter/http/rev_a'
-require 'synaccess_connect/net_booter/http/rev_b'
-
-
-
-# if defined?(Rails)
-#   module SynaccessConnect
-#     class Railtie < Rails::Railtie
-#       # initializer "carrierwave.setup_paths" do
-#       #   CarrierWave.root = Rails.root.join(Rails.public_path).to_s
-#       #   CarrierWave.base_path = ENV['RAILS_RELATIVE_URL_ROOT']
-#       # end
-
-#       # initializer "carrierwave.active_record" do
-#       #   ActiveSupport.on_load :active_record do
-#       #     require 'carrierwave/orm/activerecord'
-#       #   end
-#       # end
-#     end
-#   end
-# end
+module NetBooter
+end

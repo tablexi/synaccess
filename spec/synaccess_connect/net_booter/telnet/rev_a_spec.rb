@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'synaccess_connect/net_booter/telnet'
 
 describe NetBooter::Telnet::RevA do
   it_behaves_like 'RelayConnectionInterface'
