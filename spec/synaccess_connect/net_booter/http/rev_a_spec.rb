@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe NetBooter::Http::RevA do
+RSpec.describe NetBooter::Http::RevA do
   it_behaves_like 'RelayConnectionInterface'
 
   let(:relay) { described_class.new('192.168.10.21', :username => 'admin', :password => 'admin') }
