@@ -12,19 +12,25 @@ Communication wrappers for Synaccess netBooter power relays.
         Http
             RevA
             RevB
-        Telnet
-            RevA
-            RevB
 ```
 
-## New connections
+The Telnet interface was removed in version 0.3.0 because it was unreliable. You
+should switch to using the Http interface.
 
-`connection = NetBooter::PROTOCOL::RevX.new('XXX.XXX.XXX.XXX', options)`
+## Usage
 
-Options:
+* Add `gem "synaccess_connect", "~> 0.3.0" to your Gemfile.
 
-   * username
-   * password
+## Example
+
+```ruby
+connection = NetBooter::Http::RevA.new('XXX.XXX.XXX.XXX', username: "admin", password: "admin")
+connection.status(1)
+=> true
+connection.toggle(false, 1)
+connection.status(1)
+=> false
+```
 
 ## Interface
 
