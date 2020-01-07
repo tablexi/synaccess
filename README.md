@@ -19,7 +19,7 @@ should switch to using the Http interface.
 
 ## Usage
 
-* Add `gem "synaccess_connect", "~> 0.3.0" to your Gemfile.
+* Add `gem "synaccess_connect", "~> 0.3.0"` to your Gemfile.
 
 ## Example
 
