@@ -113,7 +113,7 @@ module NetBooter
 
     def do_http_request(path)
       resp = nil
-      Net::HTTP.start(@host) do |http|
+      Net::HTTP.start(@host, @options[:port]) do |http|
         req = Net::HTTP::Get.new(path)
 
         req.basic_auth @options[:username], @options[:password] if @options[:username] && @options[:password]
