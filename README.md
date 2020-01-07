@@ -19,7 +19,7 @@ should switch to using the Http interface.
 
 ## Usage
 
-* Add `gem "synaccess_connect", "~> 0.3.0"` to your Gemfile.
+* Add `gem "synaccess_connect", "~> 0.3.1"` to your Gemfile.
 
 ## Example
 
@@ -31,6 +31,10 @@ connection.toggle(false, 1)
 connection.status(1)
 => false
 ```
+
+Other options
+
+* `port` - Defaults to `80`
 
 ## Interface
 
